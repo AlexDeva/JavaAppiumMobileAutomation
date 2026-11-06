@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Appium Mobile Automation" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="listeners.ExtentTestListener"/>
+    </listeners>
+    <test name="Android Native Controls">
+        <parameter name="appType" value="native"/>
+        <classes>
+            <class name="tests.NativeControlsTest"/>
+        </classes>
+    </test>
+    <test name="Mobile Web Login">
+        <parameter name="appType" value="web"/>
+        <classes>
+            <class name="tests.MobileWebLoginTest"/>
+        </classes>
+    </test>
+    <test name="Samsung Calculator Arithmetic">
+        <parameter name="appType" value="calculator"/>
+        <classes>
+            <class name="tests.CalculatorArithmeticTest"/>
+        </classes>
+    </test>
+</suite>
